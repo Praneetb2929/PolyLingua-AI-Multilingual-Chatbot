@@ -1,0 +1,61 @@
+You want your chatbot to be fully deployed and functional on Vercel, without needing to run localhost:3000 for the frontend or localhost:8000 for the backend. That means:
+- ✅ Frontend hosted on Vercel
+- ✅ Backend hosted separately and publicly accessible
+- ✅ Vercel frontend fetches from the live backend, not your local machine
+Let’s make that happen.
+
+🧠 Why It Doesn’t Work Yet
+Your frontend is deployed on Vercel, but it’s still trying to fetch from http://127.0.0.1:8000/chat, which only works when your FastAPI backend is running locally. Vercel can’t reach your local machine — it needs a public backend URL.
+
+✅ Step-by-Step: Make It Fully Live
+1. 🚀 Deploy Your FastAPI Backend
+You can use one of these platforms:
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+|  |  |  | 
+
+
+Once deployed, you’ll get a public URL like:
+https://polylingua-api.onrender.com/chat
+
+
+
+2. 🔧 Update Your Frontend fetch URL
+In your page.js, change:
+const res = await fetch("http://127.0.0.1:8000/chat", {
+
+
+to:
+const res = await fetch("https://polylingua-api.onrender.com/chat", {
+
+
+Or better: use an environment variable like NEXT_PUBLIC_API_URL.
+
+3. 🛠️ Add .env.local to Your Frontend
+Create a file called .env.local in your frontend root:
+NEXT_PUBLIC_API_URL=https://polylingua-api.onrender.com
+
+
+Then update your fetch call:
+const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, {
+
+
+
+4. 🔁 Redeploy on Vercel
+Once your frontend is updated:
+- Push changes to GitHub
+- Vercel will auto-deploy
+- Your live site will now fetch from your live backend
+
+✅ Result
+You’ll be able to open:
+https://polylingua-ai.vercel.app
+
+
+And it will:
+- Show your chatbot interface
+- Handle multilingual input
+- Respond via your FastAPI backend
+- Work 24/7 — no localhost needed
