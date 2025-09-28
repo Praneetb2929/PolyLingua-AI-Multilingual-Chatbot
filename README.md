@@ -51,5 +51,11 @@ uvicorn main:app --reload
 
 • 	[ ] Markdown rendering for rich replies
 
+## Live DEMO
+
+<img width="1919" height="1014" alt="Image" src="https://github.com/user-attachments/assets/6e6bb9d0-9179-420c-9604-d74c95993a62" />
+<img width="1871" height="820" alt="Image" src="https://github.com/user-attachments/assets/39ba533f-dd8e-4d76-b40d-445038c7a901" />
+<img width="1876" height="267" alt="Image" src="https://github.com/user-attachments/assets/81573ce7-ec51-424e-89d0-a189b28c3dc2" />
+
 ## 📄 License
 MIT
