@@ -37,13 +37,18 @@ uvicorn main:app --reload
 ##🧠 Architecture
 
 • 	: Language switcher
+
 • 	: Avatars + animation
+
 • 	: Voice input + message field
+
 • 	: State management + integration
 
 ## 📌 TODO
 • 	[ ] Add auto-translation toggle
+
 • 	[ ] Persist chat history
+
 • 	[ ] Markdown rendering for rich replies
 
 ## 📄 License
