@@ -6,7 +6,11 @@ from langdetect import detect
 from deep_translator import GoogleTranslator
 
 # 🔹 Load your Gemini API key
-genai.configure(api_key="AIzaSyDEDLu6Z1Z0Fg3cv_HFI3-13XTHmuIOdw0")
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Initialize app
 app = FastAPI()
