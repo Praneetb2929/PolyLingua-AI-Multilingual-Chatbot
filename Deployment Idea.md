@@ -59,11 +59,16 @@ Or better: use an environment variable like NEXT_PUBLIC_API_URL.
 
 ### 3. 🛠️ Add .env.local to Your Frontend
 Create a file called .env.local in your frontend root:
-NEXT_PUBLIC_API_URL=https://polylingua-api.onrender.com
 
+```env
+NEXT_PUBLIC_API_URL=https://polylingua-api.onrender.com
+```
 
 Then update your fetch call:
+
+```env
 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, {
+```
 
 ### 4. 🔁 Redeploy on Vercel
 Once your frontend is updated:
