@@ -83,8 +83,11 @@ You’ll be able to open: https://polylingua-ai.vercel.app
 
 And it will:
 • 	✅ Show your chatbot interface
+
 • 	✅ Handle multilingual input
+
 • 	✅ Respond via your FastAPI backend
+
 • 	✅ Work 24/7 — no localhost needed
 
 Built with ❤️ by Praneet
